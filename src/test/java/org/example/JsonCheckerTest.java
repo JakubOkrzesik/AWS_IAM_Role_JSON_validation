@@ -22,7 +22,7 @@ class JsonCheckerTest {
     }
 
     @Test
-    void missingFieldsTest() {
+    void missingVersionTest() {
         assertFalse(JsonChecker.jsonCheck("src/test/java/org/example/test4.json"));
     }
 
@@ -39,5 +39,15 @@ class JsonCheckerTest {
     @Test
     void noRegexMatchPolicyNameTest() {
         assertFalse(JsonChecker.jsonCheck("src/test/java/org/example/test7.json"));
+    }
+
+    @Test
+    void statementNotArrayTest() {
+        assertFalse(JsonChecker.jsonCheck("src/test/java/org/example/test8.json"));
+    }
+
+    @Test
+    void invalidJsonPathTest() {
+        assertFalse(JsonChecker.jsonCheck("src/test/java/org/example/test79.json"));
     }
 }
