@@ -12,3 +12,11 @@ Or if you wish you can run the program interactively like so
 java -jar ./Remitly_intern_task.jar
 ```
 After which a prompt will appear for you to type the location to your desired json file
+
+### Tests
+
+To run the tests, while in the project directory run
+```
+mvn test
+```
+If you are working with IntelliJ Idea you can also run the test Lifecycle on the Maven's pop-up menu
